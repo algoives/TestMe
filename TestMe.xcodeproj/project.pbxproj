@@ -13,9 +13,11 @@
 		4554794A282AE3080085AC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45547948282AE3080085AC46 /* Main.storyboard */; };
 		4554794C282AE30A0085AC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4554794B282AE30A0085AC46 /* Assets.xcassets */; };
 		4554794F282AE30A0085AC46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4554794D282AE30A0085AC46 /* LaunchScreen.storyboard */; };
-		4554795A282AE30A0085AC46 /* TestMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45547959282AE30A0085AC46 /* TestMeTests.swift */; };
 		45547964282AE30B0085AC46 /* TestMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45547963282AE30B0085AC46 /* TestMeUITests.swift */; };
 		45547966282AE30B0085AC46 /* TestMeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45547965282AE30B0085AC46 /* TestMeUITestsLaunchTests.swift */; };
+		45547977282B82440085AC46 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45547976282B82440085AC46 /* QuestionTests.swift */; };
+		45547979282B82D40085AC46 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45547978282B82D40085AC46 /* Question.swift */; };
+		45547981282CFDA20085AC46 /* AnswerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45547980282CFDA20085AC46 /* AnswerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +47,12 @@
 		4554794E282AE30A0085AC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45547950282AE30A0085AC46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45547955282AE30A0085AC46 /* TestMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45547959282AE30A0085AC46 /* TestMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMeTests.swift; sourceTree = "<group>"; };
 		4554795F282AE30B0085AC46 /* TestMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45547963282AE30B0085AC46 /* TestMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMeUITests.swift; sourceTree = "<group>"; };
 		45547965282AE30B0085AC46 /* TestMeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45547976282B82440085AC46 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
+		45547978282B82D40085AC46 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		45547980282CFDA20085AC46 /* AnswerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		45547941282AE3080085AC46 /* TestMe */ = {
 			isa = PBXGroup;
 			children = (
-				45547942282AE3080085AC46 /* AppDelegate.swift */,
-				45547944282AE3080085AC46 /* SceneDelegate.swift */,
-				45547946282AE3080085AC46 /* ViewController.swift */,
-				45547948282AE3080085AC46 /* Main.storyboard */,
-				4554794B282AE30A0085AC46 /* Assets.xcassets */,
-				4554794D282AE30A0085AC46 /* LaunchScreen.storyboard */,
 				45547950282AE30A0085AC46 /* Info.plist */,
+				45547975282B7B5C0085AC46 /* App */,
+				45547974282B7B4E0085AC46 /* Controller */,
+				45547973282B7B450085AC46 /* View */,
+				45547972282B7B3A0085AC46 /* Model */,
 			);
 			path = TestMe;
 			sourceTree = "<group>";
@@ -113,7 +115,7 @@
 		45547958282AE30A0085AC46 /* TestMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				45547959282AE30A0085AC46 /* TestMeTests.swift */,
+				45547976282B82440085AC46 /* QuestionTests.swift */,
 			);
 			path = TestMeTests;
 			sourceTree = "<group>";
@@ -125,6 +127,42 @@
 				45547965282AE30B0085AC46 /* TestMeUITestsLaunchTests.swift */,
 			);
 			path = TestMeUITests;
+			sourceTree = "<group>";
+		};
+		45547972282B7B3A0085AC46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45547978282B82D40085AC46 /* Question.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		45547973282B7B450085AC46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4554794D282AE30A0085AC46 /* LaunchScreen.storyboard */,
+				45547948282AE3080085AC46 /* Main.storyboard */,
+				45547980282CFDA20085AC46 /* AnswerView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45547974282B7B4E0085AC46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45547946282AE3080085AC46 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45547975282B7B5C0085AC46 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4554794B282AE30A0085AC46 /* Assets.xcassets */,
+				45547944282AE3080085AC46 /* SceneDelegate.swift */,
+				45547942282AE3080085AC46 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +236,7 @@
 					};
 					45547954282AE30A0085AC46 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
 						TestTargetID = 4554793E282AE3080085AC46;
 					};
 					4554795E282AE30B0085AC46 = {
@@ -233,6 +272,7 @@
 			files = (
 				4554794F282AE30A0085AC46 /* LaunchScreen.storyboard in Resources */,
 				4554794C282AE30A0085AC46 /* Assets.xcassets in Resources */,
+				45547981282CFDA20085AC46 /* AnswerView.xib in Resources */,
 				4554794A282AE3080085AC46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45547947282AE3080085AC46 /* ViewController.swift in Sources */,
+				45547979282B82D40085AC46 /* Question.swift in Sources */,
 				45547943282AE3080085AC46 /* AppDelegate.swift in Sources */,
 				45547945282AE3080085AC46 /* SceneDelegate.swift in Sources */,
 			);
@@ -268,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4554795A282AE30A0085AC46 /* TestMeTests.swift in Sources */,
+				45547977282B82440085AC46 /* QuestionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +484,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -471,6 +513,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,15 +534,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BV8QQX5M8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = algoives.TestMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMe.app/TestMe";
@@ -511,11 +561,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BV8QQX5M8Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = algoives.TestMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
